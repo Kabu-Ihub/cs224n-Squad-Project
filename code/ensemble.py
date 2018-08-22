@@ -47,7 +47,7 @@ preds_rnet = json.load(open(os.path.join(cwd, file_rnet)))
 
 new_predictions = ensemble(preds_bidaf, preds_rnet)
 
-print("Writing predictions to %s..." % json_out_path)
+print("Writing prediction to %s..." % json_out_path)
 with io.open(json_out_path, 'w', encoding='utf-8') as f:
     f.write(unicode(json.dumps(new_predictions, ensure_ascii=False)))
     print("Wrote predictions to %s" % json_out_path)
